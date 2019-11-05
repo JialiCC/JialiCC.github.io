@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loteria 5</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="bootstrap.css">
+	<script>
+				
+
+			var numeros=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+		function cambiarCarta(){
+			var cont=0;
+			var cont2=0;
+			var num = Math.floor(Math.random()*54)+1;
+			var b=false;
+			document.getElementById("carta").src="Carta"+num+".jpg";
+			
+			for(var i=1; i<=32;i++){
+			var num = Math.floor(Math.random()*54)+1;
+			console.log("foto"+i);
+			if(document.getElementById("foto"+i).getAttribute("src")=="Carta"+num+".jpg"){
+				document.getElementById("foto"+i).src="Frijol.jpg";
+
+				//console.log(document.getElementById("foto"+i).data);//document.getElementById("foto"+i).data="Frijol.jpg";
+}
+}
+	
+	//for(var i=17; i<=32;i++){
+			//var num = Math.floor(Math.random()*54)+1;
+			//if(document.getElementById("foto"+i).getAttribute("src")=="Carta"+num+".jpg"){
+			//	document.getElementById("foto"+i).src="Frijol.jpg";
+
+				//console.log(document.getElementById("foto"+i).data);//document.getElementById("foto"+i).data="Frijol.jpg";
+//}
+	//}
+	//for(var i=17; i<=32;i++){
+			//var num = Math.floor(Math.random()*54)+1;
+			//console.log(document.getElementById("foto"+i).getAttribute("src"));
+			//if(document.getElementById("foto"+i).getAttribute("data")=="Carta"+num+".jpg"){
+			//	document.getElementById("foto"+i).src="Frijol.jpg";
+
+				//console.log(document.getElementById("foto"+i).data);//document.getElementById("foto"+i).data="Frijol.jpg";
+//}
+	//}
+	for(var i=1; i<17; i++){
+
+		
+		if(document.getElementById("foto"+i).getAttribute("src")=="Frijol.jpg"){
+			cont++
+		}
+	}
+		if(cont==16){
+			alert("Gano el jugador 1");
+		//document.getElementById("elementos").innerHTML="Gano el jugador1";
+		//document.getElementById("elementos").style.fontSize="100px";
+		//document.getElementById("elementos").style.color="blue";
+	}
+				
+
+
+for(var i=17; i<32; i++){
+
+		
+		if(document.getElementById("foto"+i).getAttribute("src")=="Frijol.jpg"){
+			cont2++
+		}
+	}
+		if(cont2==16){
+			alert("Gano el jugador 2 ");
+		//document.getElementById("elementos").innerHTML="Gano el jugador2";
+		//document.getElementById("elementos").style.fontSize="100px";
+		//document.getElementById("elementos").style.color="blue";
+	}
+				
+
+
+//function ganador(num){
+  			//	for(var i=0; i<num; i++){
+            //var x = document.getElementById("elementos");
+			//	}
+} 
+		
+		function creaTablero(){
+		for(var i=1; i<=16; i++){
+				document.getElementById("tablero").innerHTML+='<div '+'class="col-xs-1 well" id="casilla'+i+'">'+
+				'<div class="text-center casilla">'+i+'</div>'+'</div>';
+			}
+		}
+			
+		
+
+	</script>
+
+</head>
+<body>
+	<div class="container">
+			<div class="row">
+				<button class="btn btn-primary" onclick="cambiarCarta()">Cambiar carta</button>
+				<img src="" alt="" id="carta" width="100px">
+			</div><br>
+		<div class="row" id="tablero">
+			<div>
+				
+			</div>
+
+				
+			<div class="col-xs-6">
+				<h1>
+					Jugador 1
+				</h1>
+
+				<table border="1">
+					<tr>
+						<td><img data="Carta1.jpg" src="Carta1.jpg" id="foto1" width="90px"></td>
+						<td><img data="Carta7.jpg" src="Carta7.jpg" id="foto2" width="90px"></td>
+						<td><img data="Carta9.jpg" src="Carta9.jpg" id="foto3" width="90px"></td>
+						<td><img data="Carta30.jpg" src="Carta30.jpg" id="foto4" width="90px"></td>
+					</tr>
+					<tr>
+						<td><img data="Carta16.jpg" src="Carta16.jpg" id="foto5" width="90px" ></td>
+						<td><img data="Carta13.jpg" src="Carta13.jpg" id="foto6" width="90px" ></td>
+						<td><img data="Carta29.jpg" src="Carta29.jpg" id="foto7" width="90px" ></td>
+						<td><img data="Carta31.jpg" src="Carta31.jpg" id="foto8" width="90px" ></td>
+					</tr>
+					<tr>
+						<td><img data="Carta5.jpg" src="Carta5.jpg" id="foto9" width="90px" ></td>
+						<td><img data="Carta4.jpg" src="Carta4.jpg" id="foto10" width="90px" ></td>
+						<td><img data="Carta2.jpg" src="Carta2.jpg" id="foto11" width="90px" ></td>
+						<td><img data="Carta3.jpg" src="Carta3.jpg" id="foto12" width="90px" ></td>
+					</tr>
+					<tr>
+						<td><img data="Carta10.jpg" src="Carta10.jpg" id="foto13" width="90px"></td>
+						<td><img data="Carta11.jpg" src="Carta11.jpg" id="foto14" width="90px"></td>
+						<td><img data="Carta12.jpg" src="Carta12.jpg" id="foto15" width="90px"></td>
+						<td><img data="Carta50.jpg" src="Carta50.jpg" id="foto16" width="90px"></td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-xs-6">
+				<h1>
+					Jugador 2
+				</h1>
+								<table border="1">
+					<tr>
+						<td><img data="Carta5.jpg" src="Carta5.jpg" id="foto17" width="90px"></td>
+						<td><img data="Carta7.jpg" src="Carta7.jpg" id="foto18" width="90px"></td>
+						<td><img data="Carta43.jpg" src="Carta43.jpg" id="foto19" width="90px"></td>
+						<td><img data="Carta46.jpg" src="Carta46.jpg" id="foto20" width="90px"></td>
+					</tr>
+					<tr>
+						<td><img data="Carta31.jpg" src="Carta31.jpg" id="foto21" width="90px"></td>
+						<td><img data="Carta50.jpg" src="Carta50.jpg" id="foto22" width="90px"></td>
+						<td><img data="Carta19.jpg" src="Carta19.jpg" id="foto23" width="90px"></td>
+						<td><img data="Carta20.jpg" src="Carta20.jpg" id="foto24" width="90px"></td>
+					</tr>
+					<tr>
+						<td><img data="Carta44.jpg" src="Carta44.jpg" id="foto25" width="90px"></td>
+						<td><img data="Carta8.jpg" src="Carta8.jpg" id="foto26" width="90px"></td>
+						<td><img data="Carta2.jpg" src="Carta2.jpg" id="foto27" width="90px"></td>
+						<td><img data="Carta54.jpg" src="Carta54.jpg" id="foto28" width="90px"></td>
+					</tr>
+					<tr>
+						<td><img data="Carta3.jpg" src="Carta3.jpg" id="foto29" width="90px"></td>
+						<td><img data="Carta18.jpg" src="Carta18.jpg" id="foto30" width="90px"></td>
+						<td><img data="Carta22.jpg" src="Carta22.jpg" id="foto31" width="90px"></td>
+						<td><img data="Carta16.jpg" src="Carta16.jpg" id="foto32" width="90px"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+</body>
+</html>
